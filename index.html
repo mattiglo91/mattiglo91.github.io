@@ -1,9 +1,290 @@
+<!--html.index file begin-->
 <!DOCTYPE html>
 <html>
-<body>
+    <head>
+        <title>Sensory Speaking, LLC</title>
+        <link rel="icon" type="image/x-icon" href="pics/favicon.ico">
+        
+        <style>
+            body {
+                padding-left: 10px;
+                padding-right: 10px;
+            }
 
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
+            .banner {
+                background-color: #f0f0f000;
+                color: #ffffff;
+                text-align: center;
+                padding: 0px;
+                position: relative;
+                overflow: hidden;
+                border-bottom: 2px solid #ccc;
+            }
 
-</body>
+            .banner img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+                object-position: center;
+            }
+
+            .banner-content {
+                position: absolute;
+                top: 75%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                width: 100%;
+                z-index: 1;
+                background-color: rgba(240, 240, 240, 0);
+                padding: 10px;
+            }
+
+            h1 {
+                margin: 0;
+                font-size: 2.5em;
+            }
+
+            h2 {
+                margin: 0;
+                font-size: 1.5em;
+            }
+
+            h3 {
+                margin: 0;
+                font-size: 1.5em;
+                text-align: center;
+                margin-top: 20px;
+                padding-top: 20px;
+                border-top: 1px solid #ccc;
+            }
+
+            h4 {
+                text-align: center;
+                margin-top: 30px;
+                font-size: 1.2em;
+            }
+             h5 {
+                text-align: center;
+                 margin-top: 30px;
+                font-size: 1.2em;
+            }
+             h6 {
+                text-align: center;
+                 margin-top: 30px;
+                font-size: 1.2em;
+            }
+             h7 {
+                text-align: center;
+                 margin-top: 10px;
+                font-size: 1.2em;
+            }
+
+            .p-container {
+                background-color: #f0f0f0;
+                border: 1px solid #ccc;
+                padding: 10px;
+                margin: 20px auto;
+                width: fit-content;
+                max-width: 1000px;
+                border-radius: 10px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .p-container p {
+                padding-left: 4%;
+                padding-right: 4%;
+                margin: 0;
+                text-align: center;
+                margin-bottom: 10px;
+            }
+
+            .services-list {
+                list-style-type: disc;
+                text-align: left;
+                margin-top: 20px;
+                width: 100%;
+                padding: 0;
+                list-style-position: inside;
+            }
+
+            .services-list li {
+                margin-bottom: 5px;
+                padding-left: 5%;
+                padding-right: 5%;
+                padding-bottom: 5px;
+            }
+
+            .email-button {
+                background-color: #086bae;
+                border: none;
+                color: white;
+                padding: 10px 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 18px;
+                margin: 4px 2px;
+                cursor: pointer;
+                border-radius: 5px;
+                width: 150px;
+                height: 40px;
+                line-height: 40px;
+            }
+
+            .email-button:hover {
+                background-color: #0827d7;
+            }
+
+            .owners-container {
+                display: flex;
+                flex-wrap: wrap; /*wrap on smaller screens*/
+                justify-content: space-around;
+                margin: 20px auto;
+                width: 100%; /* Full width */
+                max-width: 1000px; /* Limit width on large screens */
+
+            }
+
+            .owner-bio {
+                background-color: #f0f0f0;
+                border: 1px solid #ccc;
+                border-radius: 10px;
+                padding: 10px;
+                width: 45%; /* Adjust width */
+                max-width: 45%;
+                box-sizing: border-box;
+                text-align: left;
+                margin-bottom: 20px;
+            }
+
+            .owner-bio img {
+                max-width: 100%; /* Make sure images are responsive */
+                height: auto; /* Maintain aspect ratio */
+                border-radius: 50%;
+            }
+            @media (max-width: 768px) {
+            .owner-bio {
+                width: 100%;
+                max-width: 100%; /* Take up full width on smaller screens */
+            }
+            }
+             .patreon-button {
+                background-color: #f96854; /* Patreon color */
+                border: none;
+                color: white;
+                padding: 10px 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                font-size: 18px;
+                margin: 4px 2px;
+                cursor: pointer;
+                border-radius: 5px;
+                 width: 150px; /* Set a fixed width */
+                height: 40px; /* Set a fixed height */
+                line-height: 40px;
+                 margin-top: 10px;
+            }
+
+            .patreon-button:hover {
+                background-color: #dd5e4c; /* Darker Patreon color */
+            }
+
+        .benefit-list {
+            list-style-type: disc;
+            text-align: left;
+            padding-left: 15%; /* Indent bullet points */
+            padding-right: 15%; /* Indent bullet points */
+            margin-top: 20px;
+        }
+        .benefit-list li {
+            margin-bottom: 10px;
+        }
+        .header-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%; /* or a fixed width, as needed */
+            margin: 0px auto;
+        }
+        </style>
+    </head>
+
+    <body>
+        <div class="banner">
+            <img src="pics/SensorySpeakingBanner.png" alt="Banner Image">
+            <div class="banner-content">
+                <h1>Sensory Speaking, LLC</h1>
+                <h2>"Building Skill, Inspiring Confidence"</h2>
+            </div>
+        </div>
+        <h3>Mission Statement | About Us</h3>
+        <div class="p-container">
+            <p>Welcome to Sensory Speaking, a speech therapy private practice founded by two experienced
+                Speech-Language Pathologists (SLPs) with over 10 years of dedication to helping individuals with
+                disabilities develop essential communication skills. We specialize in early intervention, autism
+                spectrum disorder (ASD), complex communication disorders, augmentative and alternative communication
+                (AAC), and dyslexia/reading difficulties and more! Our expertise allows us to provide
+                comprehensive and individualized therapy tailored to each client’s unique needs.
+            </p>
+            <ul class="services-list">
+                <li>In-home and virtual evaluations and therapy for children and individuals with speech, language,
+                    and communication needs.</li>
+                <li>Reading intervention using the Seeing Stars® program, designed to improve phonemic awareness,
+                    symbol imagery, and overall reading fluency.</li>
+                <li>Parent training, equipping families with the strategies and tools to support their child’s
+                    communication and literacy development at home.</li>
+                <li>School contracting, offering high-quality SLP services to schools in need of speech and
+                    language support for their students.</li>
+            </ul>
+            <p>At Sensory Speaking, we are committed to providing compassionate, evidence-based therapy that
+                empowers individuals and families.</p>
+            <a href="mailto:info@sensoryspeaking.org" class="email-button" target="_blank">Email Us</a>
+        </div>
+        <h4>Meet the Team/Owners</h4>
+        <div class="owners-container">
+            <div class="owner-bio">
+                <img src="pics/MarleeCropped.png" alt="Owner 1 Headshot">
+                <p>This is the blurb for owner 1 and should be centered left or wrapped around picture</p>
+            </div>
+            <div class="owner-bio">
+                <img src="pics/AshleyCropped.png" alt="Owner 2 Headshot">
+                <p>This is the blurb for owner 2 and should be centered right or wrapped around picture</p>
+            </div>
+        </div>
+        <h5>Join us on Patreon !</h5>
+        <div class="p-container">
+            <p>Join our Patreon community designed for Speech-Language Pathologists (SLPs) looking to break into school contracting! As private practice owners, we provide valuable resources, insights, and support to help therapist-owned small businesses navigate RFPs, contract rates, and proposal writing. Whether you're aiming for full self-employment, expanding your practice, or seeking better compensation, our exclusive content will equip you with the knowledge you need. Let’s build a supportive network where we share successes and thrive together in school contracting!</p>
+            <a href="https://www.patreon.com/slpcontracts" class="patreon-button" target="_blank">Join our Patreon!</a>
+        </div>
+        <div class="header-container">
+        <h6>Seeing Stars® Program</h6>
+        <h7>Boost Your Child’s Speech & Reading Skills This Summer!</h7>
+    </div>
+        <div class="p-container">
+            <p>Give your child the gift of confidence in communication and literacy with expert-led speech therapy and reading tutoring sessions. Our program is designed to enhance phonemic awareness, symbol imagery, and word recognition skills using the highly effective Seeing Stars® program.</p>
+            <ul class="benefit-list">
+            <li>Led by Licensed Speech Therapists</li>
+            <li>Over 10 Years of Experience in Public & Private Educational Settings</li>
+            <li>Personalized One-on-One Sessions**</li>
+            <li>Engaging, Evidence-Based Strategies for Lasting Success</li>
+            </ul>
+            <p>
+                <b>Who Can Benefit?</b>
+            </p>
+            <ul class="benefit-list">
+                <li>Children struggling with reading fluency & comprehension</li>
+                <li>Kids needing extra support with speech & language development</li>
+                <li>Students looking to strengthen literacy skills over the summer</li>
+            </ul>
+            <p>
+                <b>Location:</b> [Insert Location or Virtual Options]  <br>
+                <b>Dates:</b>[Insert Available Summer Sessions]  <br>
+                <b>Contact Us:</b> [Insert Phone/Email]
+            </p>
+        </div>
+    </body>
 </html>
+
