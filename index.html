@@ -3,7 +3,7 @@
 <html>
     <head>
         <title>Sensory Speaking, LLC</title>
-        <link rel="icon" type="image/x-icon" href="pics/favicon.ico">
+        <link rel="icon" type="image/x-icon" href="pics/favicon2.ico">
         
         <style>
             body {
@@ -209,15 +209,41 @@
             width: 100%; /* or a fixed width, as needed */
             margin: 0px auto;
         }
+        /* FAQ Styles */
+        .faq-container {
+            width: fit-content;
+            max-width: 1000px;
+            margin: 20px auto;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #f0f0f0;
+            padding: 10px;
+        }
+
+        .faq-question {
+            cursor: pointer;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+            font-weight: bold;
+        }
+
+        .faq-answer {
+            padding: 10px;
+            display: none; /* Hide answers by default */
+        }
+
+        .faq-question.active + .faq-answer {
+            display: block; /* Show answer when question is active */
+        }
         </style>
     </head>
 
     <body>
         <div class="banner">
-            <img src="pics/SensorySpeakingBanner.png" alt="Banner Image">
+            <img src="pics/SensorySpeaking_Banner2.JPG" alt="Banner Image">
             <div class="banner-content">
-                <h1>Sensory Speaking, LLC</h1>
-                <h2>"Building Skill, Inspiring Confidence"</h2>
+                <h1><!--Sensory Speaking, LLC--></h1>
+                <h2><!--"Building Skill, Inspiring Confidence"--></h2>
             </div>
         </div>
         <h3>Mission Statement | About Us</h3>
@@ -253,7 +279,7 @@
                     When she’s not making an impact through her work, Marlee enjoys spending quality time with her husband, mini dachshund and baby boy.</p>
             </div>
             <div class="owner-bio">
-                <img src="pics/AshleyCropped2.png" alt="Owner 2 Headshot">
+                <img src="pics/AshleyCropped.png" alt="Owner 2 Headshot">
                 <p>Meet Ashley Tato, MS CCC-SLP – Co-Founder and Co-Owner
                     Ashley Tato is a skilled Speech-Language Pathologist (SLP) with experience working in both private and public school settings. Prior to becoming an SLP, Ashley was a Teacher of the Deaf, giving her a unique and valuable perspective on language development and communication strategies with over 10 years of professional experience. As a co-founder and co-owner of Sensory Speaking, Ashley is deeply committed to helping individuals unlock their communication potential.
                     Ashley specializes in targeting language, articulation, and working with Augmentative and Alternative Communication (AAC) systems, tailoring her approach to meet each individual’s needs. She is passionate about incorporating a sensory integrative therapy approach, focusing on the whole child to create lasting change. Ashley also thrives on empowering parents through a coaching model, equipping them with the tools to support their child’s progress at home and in their community.
@@ -291,6 +317,31 @@
                 <b>Contact Us:</b> [Insert Phone/Email]
             </p>
         </div>
+        <!-- FAQ Section -->
+        <h3>Frequently Asked Questions</h3>
+        <div class="faq-container">
+            <div class="faq-question">What areas do you serve?</div>
+            <div class="faq-answer">
+                <p>We offer in-home services in [Insert Service Area] and virtual services to clients across [Insert Virtual Service Area]. Please contact us to confirm if we serve your specific location.</p>
+            </div>
+            <div class="faq-question">What ages do you work with?</div>
+            <div class="faq-answer">
+                <p>We work with children and individuals of all ages, from early intervention through adulthood. Our services are tailored to meet the unique needs of each client.</p>
+            </div>
+            <div class="faq-question">How do I get started with therapy?</div>
+            <div class="faq-answer">
+                <p>To get started, please email us at <a href="mailto:info@sensoryspeaking.org">info@sensoryspeaking.org</a> or call us at [Insert Phone Number]. We will schedule a consultation to discuss your needs and determine the best course of action.</p>
+            </div>
+        </div>
+        <script>
+            // JavaScript to handle FAQ toggling
+            const faqQuestions = document.querySelectorAll('.faq-question');
+
+            faqQuestions.forEach(question => {
+                question.addEventListener('click', () => {
+                    question.classList.toggle('active');
+                });
+            });
+        </script>
     </body>
 </html>
-
