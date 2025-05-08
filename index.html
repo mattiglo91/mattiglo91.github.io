@@ -236,6 +236,34 @@
         .faq-question.active + .faq-answer {
             display: block; /* Show answer when question is active */
         }
+
+         /* Footer Styles */
+         .site-footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            border-top: 2px solid #ccc; /* Consistent with banner bottom border */
+            background-color: #f0f0f0; /* Consistent with p-container */
+            font-family: 'Brush Script MT', cursive; /* Consistent font */
+            font-size: 1em;
+        }
+
+        .site-footer p {
+            margin: 8px 0;
+        }
+
+        .site-footer .social-links a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #086bae; /* Consistent with email button */
+            font-size: 1.1em;
+            font-weight: normal; /* Override potential inherited bold from other p tags if any */
+        }
+        .site-footer .social-links a:hover {
+            color: #0827d7; /* Consistent with email button hover */
+            text-decoration: underline;
+        }
+
         </style>
     </head>
 
@@ -351,7 +379,17 @@
             <div class="faq-answer">
                 <p>Yes! We offer Telehealth services as a convenient and flexible option for families.</p>
             </div>  
+        </div> <!-- Closing faq-container -->
 
+        <footer class="site-footer">
+            <p>Contact Us</p>
+            <div class="social-links">
+                <a href="#" target="_blank" aria-label="Facebook">Facebook</a> <!-- Placeholder: Update href with actual link -->
+                <a href="#" target="_blank" aria-label="Instagram">Instagram</a> <!-- Placeholder: Update href with actual link -->
+            </div>
+            <p><a href="mailto:info@sensoryspeaking.org">info@sensoryspeaking.org</a> | 904-505-0847</p>
+            <p>&copy; <span id="copyrightYear"></span> Sensory Speaking, LLC. All rights reserved.</p>
+        </footer>
 
         <script>
             // JavaScript to handle FAQ toggling
@@ -362,6 +400,11 @@
                     question.classList.toggle('active');
                 });
             });
+
+            // JavaScript to set the current year in the footer
+            if (document.getElementById('copyrightYear')) {
+                document.getElementById('copyrightYear').textContent = new Date().getFullYear();
+            }
         </script>
     </body>
 </html>
