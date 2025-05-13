@@ -194,6 +194,26 @@
                 background-color: #dd5e4c; /* Darker Patreon color */
             }
 
+        .download-button {
+            background-color: #F4D36A;
+            border: none;
+            color: white;
+            padding: 10px 20px; /* Consistent padding */
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 18px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 5px;
+            width: auto; /* Fit content */
+            height: 40px; /* Consistent height */
+            line-height: 40px; /* Vertically center text */
+        }
+
+        .download-button:hover {
+            background-color: #F6BA42;
+        }
         .benefit-list {
             list-style-type: disc;
             text-align: left;
@@ -387,6 +407,15 @@
                 <p>Yes! We offer Telehealth services as a convenient and flexible option for families.</p>
             </div>  
         </div> <!-- Closing faq-container -->
+
+        <h3>Already a Patient? <span style='font-size:25px;'>&#128196;</span></h3>
+        <div class="p-container">
+            <p>Click the button below to download our policies and procedures.</p>
+            <a href="docs/Policies and Procedures - Sensory Speaking, LLC.pdf" class="download-button" download="SensorySpeaking_Patient_Forms.pdf">Download Patient Forms</a>
+            <!-- Ensure the PDF file exists at the specified 'href' path (docs/Policies and Procedures - Sensory Speaking, LLC.pdf) -->
+        </div>
+
+        
 
         <footer class="site-footer">
             <p>Contact Us</p>
