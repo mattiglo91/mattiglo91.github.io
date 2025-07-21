@@ -56,29 +56,20 @@
                 text-align: center;
                 margin-top: 20px;
                 padding-top: 20px;
-                border-top: 1px solid #ccc;
                 font-family: "Comic Relief", cursive; /* Apply Google Font */
             }
 
-            h4 {
+            h4, h5, h6 {
                 text-align: center;
                 margin-top: 30px;
                 font-size: 1.2em;
             }
-             h5 {
+
+            .subtitle {
                 text-align: center;
-                 margin-top: 30px;
+                margin: 10px 0 0;
                 font-size: 1.2em;
-            }
-             h6 {
-                text-align: center;
-                 margin-top: 30px;
-                font-size: 1.2em;
-            }
-             h7 {
-                text-align: center;
-                 margin-top: 10px;
-                font-size: 1.2em;
+                font-weight: bold;
             }
 
             .p-container {
@@ -245,8 +236,12 @@
         .faq-question {
             cursor: pointer;
             padding: 10px;
-            border-bottom: 1px solid #ccc;
+            border-top: 1px solid #ccc;
             font-weight: bold;
+        }
+
+        .faq-question:first-child {
+            border-top: none;
         }
 
         .faq-answer {
@@ -349,7 +344,7 @@
         </div>
         <div class="header-container">
         <h6>Seeing Stars® Program <span style='font-size:25px;'>&#129321;</span> </h6>
-        <h7>Boost Your Child’s Speech & Reading Skills This Summer!</h7>
+        <p class="subtitle">Boost Your Child’s Speech & Reading Skills This Summer!</p>
     </div>
         <div class="p-container">
             <p>Give your child the gift of confidence in communication and literacy with expert-led speech therapy and reading tutoring sessions. This program is designed to enhance phonemic awareness, symbol imagery, and word recognition skills using the highly effective Seeing Stars® program.</p>
@@ -373,6 +368,7 @@
                 <b>Contact Us:</b> info@sensoryspeaking.org | 904-505-0847
             </p>
         </div>
+        
         <!-- FAQ Section -->
         <h3>Frequently Asked Questions <span style='font-size:25px;'>&#129300;</span> </h3>
         <div class="faq-container">
@@ -390,7 +386,8 @@
             <div class="faq-answer">
                 <p>Our therapists provide services in a variety of settings, including homes, schools, and community environments. We aim to meet your child where they thrive best.</p>
             </div>
-    <!--<a href="mailto:info@sensoryspeaking.org">info@sensoryspeaking.org</a>-->
+   
+            <!--<a href="mailto:info@sensoryspeaking.org">info@sensoryspeaking.org</a>-->
             
             <div class="faq-question">Do you accept insurance?</div>
             <div class="faq-answer">
@@ -418,10 +415,10 @@
         
 
         <footer class="site-footer">
-            <p>Contact Us</p>
+           <p>Contact Us</p>
             <div class="social-links">
-                <a href="#" target="_blank" aria-label="Facebook">Facebook</a> <!-- Placeholder: Update href with actual link -->
-                <a href="#" target="_blank" aria-label="Instagram">Instagram</a> <!-- Placeholder: Update href with actual link -->
+                <!--<a href="#" target="_blank" aria-label="Facebook">Facebook</a> Placeholder: Update href with actual link -->
+                <!--<a href="#" target="_blank" aria-label="Instagram">Instagram</a>  Placeholder: Update href with actual link -->
             </div>
             <p><a href="mailto:info@sensoryspeaking.org">info@sensoryspeaking.org</a> | 904-505-0847</p>
             <p>&copy; <span id="copyrightYear"></span> Sensory Speaking, LLC. All rights reserved.</p>
@@ -430,10 +427,20 @@
         <script>
             // JavaScript to handle FAQ toggling
             const faqQuestions = document.querySelectorAll('.faq-question');
-
-            faqQuestions.forEach(question => {
-                question.addEventListener('click', () => {
-                    question.classList.toggle('active');
+ 
+            faqQuestions.forEach(clickedQuestion => {
+                clickedQuestion.addEventListener('click', () => {
+                    const isAlreadyActive = clickedQuestion.classList.contains('active');
+ 
+                    // First, close all other questions
+                    faqQuestions.forEach(otherQuestion => {
+                        otherQuestion.classList.remove('active');
+                    });
+ 
+                    // If the clicked question was not already active, open it.
+                    if (!isAlreadyActive) {
+                        clickedQuestion.classList.add('active');
+                    }
                 });
             });
 
@@ -441,6 +448,20 @@
             if (document.getElementById('copyrightYear')) {
                 document.getElementById('copyrightYear').textContent = new Date().getFullYear();
             }
+
+            // Lock the FAQ container width to prevent it from resizing when an answer is opened.
+            const faqContainer = document.querySelector('.faq-container');
+            const setFaqContainerWidth = () => {
+                if (!faqContainer) return;
+                // On resize, allow the container to recalculate its 'fit-content' width
+                faqContainer.style.width = 'fit-content';
+                // Then, lock the width to that calculated value in pixels to prevent expansion
+                faqContainer.style.width = `${faqContainer.offsetWidth}px`;
+            };
+
+            // Run when the page is fully loaded (including fonts) and when resized
+            window.addEventListener('load', setFaqContainerWidth);
+            window.addEventListener('resize', setFaqContainerWidth);
         </script>
     </body>
 </html>
